@@ -21,9 +21,11 @@ const HomePage = () => {
             VORTEXIUM and get 20% from staking !
           </div>
           <br></br>
-          <button className='sec1-button'>
-            <NavLink to='/login'>Register/Login</NavLink>
-          </button>
+
+          <NavLink to='/login' className='sec1-button'>
+            {" "}
+            Register/Login
+          </NavLink>
         </div>
       </div>
       <div className='sec2'>

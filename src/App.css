@@ -220,13 +220,18 @@ body {
 }
 
 .sec1-button {
-  border-radius: 8%;
-  border: 3px solid #c88827;
+  border-radius: 50px;
+  position: relative;
+  top: 30px;
+  color: #8d8ca8;
+  border: 2mm ridge #8d8ca8;
+
   height: 7vh;
   width: 12vw;
   font-size: 3vh;
-  background-color: #ffffff;
   cursor: pointer;
+  font-weight: bold;
+  padding: 10px;
 }
 
 .sec2-heading {

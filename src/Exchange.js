@@ -104,10 +104,21 @@ const Exchange = ({ balance, changeInBalance }) => {
                       className='tempCoin-icon'
                     />
                   </th>
-                  <th style={{ width: "30%", fontSize: "2vh" }}>
+                  <th
+                    style={{
+                      width: "30%",
+                      fontSize: "2vh",
+                    }}
+                  >
                     {"Vortexium (vtx)  "}
                   </th>
-                  <th style={{ width: "20%", fontSize: "2vh" }}>
+                  <th
+                    style={{
+                      width: "20%",
+                      fontSize: "2vh",
+                      marginLeft: "10vh",
+                    }}
+                  >
                     {"$ " + y.toFixed(4)}
                   </th>
                   <th style={{ width: "20%", fontSize: "2vh" }}>{"$ 29900"}</th>

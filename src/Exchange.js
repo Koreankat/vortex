@@ -16,7 +16,7 @@ const Exchange = ({ balance, changeInBalance }) => {
   const [coins, setCoins] = useState([])
   const [search, setSearch] = useState("")
   const currency = "USD"
-  const symbol = "$"
+
   const fetchTrendingCoins = async () => {
     const { data } = await axios.get(CoinList(currency))
     console.log(data)
@@ -38,27 +38,27 @@ const Exchange = ({ balance, changeInBalance }) => {
 
   const x = 27.9
   const y = 65.452
+
+  toast.configure()
+
   const [vortexium] = React.useState({
     name: "Vortexium",
-    price: "65$",
+    price: 6000,
   })
   async function handleToken(token, addresses) {
-    const response = await axios.post(
-      "https://6r2gj6.sse.codesandbox.io/checkout",
-      {
-        token,
-        vortexium,
-      }
-    )
-    const { status } = response.data
-    console.log("Response:", response.data)
-    if (status === "success") {
+    const response = await axios.post("http://localhost:8080/checkout", {
+      token,
+      vortexium,
+    })
+
+    console.log(response.status)
+
+    if (response.status === 200) {
       toast("Success! Check email for details", { type: "success" })
     } else {
       toast("Something went wrong", { type: "error" })
     }
   }
-
   return (
     <div className='total-area'>
       <Sidebar balance={balance} />

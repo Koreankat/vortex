@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/static/css/main.370020aa.css",
+    "main.js": "/static/js/main.76cd5ac7.js",
+    "static/media/Bitcoin.jpeg": "/static/media/Bitcoin.98b68dfa17187c0c2d9a.jpeg",
+    "static/media/bitcoins.jpeg": "/static/media/bitcoins.e14e850cfa7fd4724dde.jpeg",
+    "static/media/vortex.coin.png": "/static/media/vortex.coin.5f69506168299ace2ae0.png",
+    "static/media/courses.png": "/static/media/courses.e6614d4040524061d6fd.png",
+    "static/media/SidebarImage2.png": "/static/media/SidebarImage2.298093d21e24e7a462f3.png",
+    "static/media/coins.jpeg": "/static/media/coins.651fa24968dd737065cb.jpeg",
+    "static/media/vortex-logo(Vortex).png": "/static/media/vortex-logo(Vortex).1a82e94e39c279b2299d.png",
+    "static/media/articles.png": "/static/media/articles.2b69c23fe369a691cd33.png",
+    "static/media/DisplayPictureAlt.png": "/static/media/DisplayPictureAlt.30b2e7f1f346597d98ed.png",
+    "static/media/SidebarImage.png": "/static/media/SidebarImage.ca201a726511dc2131f1.png",
+    "index.html": "/index.html",
+    "main.370020aa.css.map": "/static/css/main.370020aa.css.map",
+    "main.76cd5ac7.js.map": "/static/js/main.76cd5ac7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.370020aa.css",
+    "static/js/main.76cd5ac7.js"
+  ]
+}

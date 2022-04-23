@@ -2,28 +2,28 @@ import logo from "./assets/vortex.coin.png"
 import React from "react"
 import ReactDOM from "react-dom"
 import StripeCheckout from "react-stripe-checkout"
+
 import axios from "axios"
 import { toast } from "react-toastify"
 
 import "react-toastify/dist/ReactToastify.css"
-toast.configure()
 
 const Buy = (balance) => {
+  toast.configure()
+
   const [vortexium] = React.useState({
     name: "Vortexium",
-    price: "65$",
+    price: 600,
   })
   async function handleToken(token, addresses) {
-    const response = await axios.post(
-      "https://6r2gj6.sse.codesandbox.io/checkout",
-      {
-        token,
-        vortexium,
-      }
-    )
-    const { status } = response.data
-    console.log("Response:", response.data)
-    if (status === "success") {
+    const response = await axios.post("http://localhost:8080/checkout", {
+      token,
+      vortexium,
+    })
+
+    console.log(response.status)
+
+    if (response.status === 200) {
       toast("Success! Check email for details", { type: "success" })
     } else {
       toast("Something went wrong", { type: "error" })
@@ -47,9 +47,10 @@ const Buy = (balance) => {
           <br></br>
           <StripeCheckout
             label='Buy Vortexium'
-            stripeKey='pk_test_4TbuO6qAW2XPuce1Q6ywrGP200NrDZ2233'
+            stripeKey='pk_test_51KqjyVJQOvuEYUCuGre0kVF8vMq4jLcp0ZPgQYRVFyPxst6TNTUoGZjqUxK8zIdpIm7dxZ8LIkH8XL1YuZaWAsuH00QyQZgPph'
             token={handleToken}
-            name='Vortexium'
+            name={vortexium.name}
+            amount={vortexium.price * 100}
             billingAddress
             shippingAddress
           />
